@@ -8,3 +8,7 @@
 
 4. Install Flask
 	pip install flask
+
+5. Setup server routes in server.py
+
+6. Add proxy in the package.json file in react app.

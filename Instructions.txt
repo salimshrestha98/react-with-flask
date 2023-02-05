@@ -1,0 +1,10 @@
+1. Create a folder for backend and a file server.py inside it.
+
+2. Create a react app using "npx create-react-app <app name>" from the root folder.
+
+3. Create a virtual environment:
+	python -m venv <path>   => Create a Virtual Enviromnent
+	<env-name>/Scripts/activate => Activate the Virtual Environment we created
+
+4. Install Flask
+	pip install flask

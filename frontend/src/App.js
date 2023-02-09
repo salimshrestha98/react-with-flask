@@ -1,4 +1,5 @@
 import ExpenseItem from './components/ExpenseItem'
+import Card from './components/Card';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
   ]
 
   return (
-    <div>
+    <Card>
       {
         expenses.map( (expense) => (
           <ExpenseItem
@@ -29,7 +30,7 @@ function App() {
           />
         ))
       }
-    </div>
+    </Card>
   )
 }
 

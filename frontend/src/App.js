@@ -1,9 +1,11 @@
+import React, {useState} from 'react';
 import ExpenseItem from './components/ExpenseItem'
 import Card from './components/Card';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
 
-  const expenses = [
+  const [expenses, setExpenses] = useState([
     {
       id: 'e1',
       title: 'Car Insurance',
@@ -16,7 +18,18 @@ function App() {
       amount: 999.99,
       date: new Date(2023, 1, 5)
     },
-  ]
+  ]);
+
+  const addExpenseHandler = (newExpense) => {
+    const data = {
+      id : Math.random().toString(),
+      title: newExpense.expense_title,
+      amount: newExpense.expense_amount,
+      date: new Date(newExpense.expense_date)
+    }
+
+    setExpenses([...expenses, data] );
+  }
 
   return (
     <Card>
@@ -30,6 +43,7 @@ function App() {
           />
         ))
       }
+      <NewExpense addExpense={addExpenseHandler}/>
     </Card>
   )
 }
